@@ -1,0 +1,47 @@
+{
+  "name": "cyber-chat",
+  "version": "0.0.1",
+  "description": "An interactive chat application designed to teach Universal React/Redux",
+  "author": "Alex Banks <alex@moonhighway.com> (http://www.moonhighway.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MoonTahoe/cyber-chat/issues"
+  },
+  "homepage": "https://github.com/MoonTahoe/cyber-chat#readme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoonTahoe/cyber-chat.git"
+  },
+  "keywords": [
+    "Tutorial",
+    "Universal",
+    "React",
+    "Redux",
+    "Learning",
+    "React"
+  ],
+  "dependencies": {
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-cli": "^6.9.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "css-loader": "^0.23.1",
+    "deep-freeze": "0.0.1",
+    "file-loader": "^0.8.5",
+    "node-sass": "^3.7.0",
+    "postcss-loader": "^0.9.1",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1"
+  }
+}

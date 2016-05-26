@@ -1,0 +1,21 @@
+{
+  "user": "",
+  "rooms": {
+    "politics": {
+      "members": [],
+      "messages": []
+    },
+    "sports": {
+      "members": [],
+      "messages": []
+    },
+    "entertainment": {
+      "members": [],
+      "messages": []
+    },
+    "technology": {
+      "members": [],
+      "messages": []
+    }
+  }
+}

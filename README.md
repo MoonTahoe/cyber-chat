@@ -2,11 +2,23 @@ Cyber Chat
 ===========
 An interactive chat application designed to teach Universal React/Redux
 
-Under Construction - Upcomming Builds
----------------------------------------
+Commands
+---------
+The following npm commands can be run for linting, starting, developing, testing, and checking code coverage.
 
-* ~~(v0.0.1) Initial webpack configuration~~
-* (v0.0.2) Linting and Testing Configuration
+* `$ npm install` -> Installs app dependencies (Necessary Step)
+* `$ npm run lint` -> Runs eslint for code hinting
+* `$ npm run dev` -> Runs the development environment
+* `$ npm run shallow-test` -> Runs shallow testing for development, watches tests
+* `$ npm run test` -> Runs unit tests with code coverage
+* `$ npm run coverage` -> Opens the code coverage reporter
+
+Next Build : Express File Server
+---------------------------------------
+This repo is currently under construction. 
+
+* [~~(v0.0.1) Initial webpack configuration~~](https://github.com/MoonTahoe/cyber-chat/tree/v0.0.1)
+* [~~(v0.0.2) Linting and Testing Configuration~~](https://github.com/MoonTahoe/cyber-chat/tree/v0.0.2)
 * (v0.1.0) Initial Express/Socket.IO server
 * (v0.2.0) Redux
     * (v0.1.1) Reducers

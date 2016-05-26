@@ -1,6 +1,6 @@
 {
   "name": "cyber-chat",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An interactive chat application designed to teach Universal React/Redux",
   "author": "Alex Banks <alex@moonhighway.com> (http://www.moonhighway.com)",
   "license": "MIT",
@@ -10,7 +10,12 @@
   "homepage": "https://github.com/MoonTahoe/cyber-chat#readme",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "./node_modules/.bin/eslint .",
+    "dev": "webpack -w --progress",
+    "test": "./node_modules/.bin/babel-node ./node_modules/.bin/babel-istanbul cover ./node_modules/.bin/_mocha -- --require ./test/setup.js --recursive",
+    "shallow-test": "mocha --compilers js:babel-core/register --recursive --watch",
+    "posttest": "npm run lint",
+    "coverage": "open ./coverage/lcov-report/index.html"
   },
   "repository": {
     "type": "git",
@@ -31,16 +36,26 @@
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "babel-cli": "^6.9.0",
+    "babel-istanbul": "^0.8.0",
     "babel-loader": "^6.2.4",
+    "babel-plugin-rewire": "^1.0.0-rc-3",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
+    "chai": "^3.5.0",
     "css-loader": "^0.23.1",
     "deep-freeze": "0.0.1",
+    "enzyme": "^2.3.0",
+    "eslint": "^2.10.2",
+    "eslint-plugin-react": "^5.1.1",
     "file-loader": "^0.8.5",
+    "jsdom": "^9.2.0",
+    "mocha": "^2.5.3",
     "node-sass": "^3.7.0",
     "postcss-loader": "^0.9.1",
+    "rewire": "^2.5.1",
     "sass-loader": "^3.2.0",
+    "sinon": "^1.17.4",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1"
   }

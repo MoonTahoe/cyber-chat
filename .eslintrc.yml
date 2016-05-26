@@ -26,6 +26,7 @@ rules:
     - error
     - never
   no-unused-vars: 0
+  no-console: 0
 globals:
     describe: true
     it: true
@@ -34,3 +35,4 @@ globals:
     beforeEach: true
     afterEach: true
     __dirname: true
+    process: true

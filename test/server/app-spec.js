@@ -23,6 +23,10 @@ describe('Express Server', () => {
             expect($('title').text()).to.equal('Cyber Chat')
         )
 
+        it('Should render header on server', () =>
+            expect($('h1').text()).to.equal('Cyber Chat')
+        )
+
     })
 
 })

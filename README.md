@@ -21,11 +21,10 @@ This repo is currently under construction.
 * [~~(v0.0.1) Initial webpack configuration~~](https://github.com/MoonTahoe/cyber-chat/tree/v0.0.1)
 * [~~(v0.0.2) Linting and Testing Configuration~~](https://github.com/MoonTahoe/cyber-chat/tree/v0.0.2)
 * [~~(v0.1.0) Initial Express/Socket.IO server~~](https://github.com/MoonTahoe/cyber-chat/tree/v0.1.0)
-* (v0.2.0) Redux
+* [~~(v0.2.0) Universal Redux~~](https://github.com/MoonTahoe/cyber-chat/tree/v0.2.0)
     * [~~(v0.1.1) Reducers~~](https://github.com/MoonTahoe/cyber-chat/tree/v0.1.1)
     * [~~(v0.1.2) Store and Middleware~~](https://github.com/MoonTahoe/cyber-chat/tree/v0.1.2)
     * [~~(v0.1.3) Action Creators~~](https://github.com/MoonTahoe/cyber-chat/tree/v0.1.3)
-    * (v0.1.4) Universal Redux Incorporated
 * (v0.3.0) react-router 
     * (v0.2.1) basic browser routes
     * (v0.2.2) server universal browser routes

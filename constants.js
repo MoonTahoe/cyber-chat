@@ -4,8 +4,7 @@ const constants = {
     SET_NAME: 'SET_NAME',
     JOIN_ROOM: 'JOIN_ROOM',
     CHAT_MESSAGE: 'CHAT_MESSAGE',
-    LEAVE_ROOM: 'LEAVE_ROOM',
-    CHANGE_NAME: 'CHANGE_NAME'
+    LEAVE_ROOM: 'LEAVE_ROOM'
 }
 
 module.exports = readOnly(constants)

@@ -16,7 +16,7 @@ describe('messages Reducer', () => {
         deepFreeze(action)
 
         expect(messages(state, action)).to.deep.equal(['mark has entered the room'])
-    });
+    })
 
     it('LEAVE_ROOM success', () => {
         const state = []
@@ -29,7 +29,7 @@ describe('messages Reducer', () => {
         deepFreeze(action)
 
         expect(messages(state, action)).to.deep.equal(['joe has left the room'])
-    });
+    })
 
     it('CHAT_MESSAGE success', () => {
         const state = ['ted: hi']
@@ -43,8 +43,8 @@ describe('messages Reducer', () => {
         deepFreeze(action)
 
         expect(messages(state, action)).to.deep.equal(['ted: hi', 'joe: hello world'])
-    });
+    })
 
     it('Defaults for incorrect action', () => expect((messages())).to.deep.equal([]))
 
-});
+})

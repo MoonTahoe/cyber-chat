@@ -23,7 +23,7 @@ This repo is currently under construction.
 * [~~(v0.1.0) Initial Express/Socket.IO server~~](https://github.com/MoonTahoe/cyber-chat/tree/v0.1.0)
 * (v0.2.0) Redux
     * [~~(v0.1.1) Reducers~~](https://github.com/MoonTahoe/cyber-chat/tree/v0.1.1)
-    * (v0.1.2) Store and Middleware
+    * [~~(v0.1.2) Store and Middleware~~](https://github.com/MoonTahoe/cyber-chat/tree/v0.1.2)
     * (v0.1.3) Action Creators
     * (v0.1.4) Universal Redux Incorporated
 * (v0.3.0) react-router 

@@ -7,6 +7,7 @@ Commands
 The following npm commands can be run for linting, starting, developing, testing, and checking code coverage.
 
 * `$ npm install` -> Installs app dependencies (Necessary Step)
+* `$ npm start` -> Starts the Cyber Chat App
 * `$ npm run lint` -> Runs eslint for code hinting
 * `$ npm run dev` -> Runs the development environment
 * `$ npm run shallow-test` -> Runs shallow testing for development, watches tests

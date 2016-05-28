@@ -1,5 +1,5 @@
 module.exports = {
-    'user': '',
+    'users': [],
     'rooms': [
         {
             'name': 'politics',

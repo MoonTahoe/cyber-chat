@@ -1,12 +1,12 @@
 import { SET_NAME, EXIT_CHAT } from '../../../constants'
-import { user } from '../../../store/reducers'
+import { users } from '../../../store/reducers'
 import deepFreeze from 'deep-freeze'
 import { expect } from 'chai'
 
-describe('user Reducer', () => {
+describe('users Reducer', () => {
 
     it('SET_NAME success', () => {
-        const state = ''
+        const state = ['tom']
         const action = {
             type: SET_NAME,
             member: 'mark'
@@ -14,11 +14,11 @@ describe('user Reducer', () => {
         deepFreeze(state)
         deepFreeze(action)
 
-        expect(user(state, action)).to.deep.equal('mark')
+        expect(users(state, action)).to.deep.equal(['tom','mark'])
     })
 
     it('EXIT_CHAT success', () => {
-        const state = 'mark'
+        const state = ['tom', 'mark']
         const action = {
             type: EXIT_CHAT,
             member: 'mark'
@@ -26,9 +26,9 @@ describe('user Reducer', () => {
         deepFreeze(state)
         deepFreeze(action)
 
-        expect(user(state, action)).to.deep.equal('')
+        expect(users(state, action)).to.deep.equal(['tom'])
     })
 
-    it('Defaults for incorrect action', () => expect((user())).to.deep.equal(''))
+    it('Defaults for incorrect action', () => expect((users())).to.deep.equal([]))
 
 })

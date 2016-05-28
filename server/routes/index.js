@@ -2,7 +2,7 @@ import { renderToString } from 'react-dom/server'
 import { Provider } from 'react-redux'
 import { App } from '../../components'
 import { Router } from 'express'
-import initialState from '../../data'
+import initialState from '../../data/client'
 import storeFactory from '../../store'
 
 const store = storeFactory(false, initialState)

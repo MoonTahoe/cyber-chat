@@ -1,4 +1,4 @@
-import { JOIN_ROOM, LEAVE_ROOM, CHAT_MESSAGE } from '../../constants'
+import { JOIN_ROOM, LEAVE_ROOM, CHAT_MESSAGE_RECEIVED } from '../../constants'
 import members from './members'
 import messages from './messages'
 
@@ -11,7 +11,7 @@ const rooms = (state=[], action={type:null}) => {
                 members: members(room.members, action),
                 messages: messages(room.messages, action)
             })
-        case CHAT_MESSAGE :
+        case CHAT_MESSAGE_RECEIVED :
             return state.map(room => (room.name !== action.room) ? room : {
                 ...room,
                 messages: messages(room.messages, action)

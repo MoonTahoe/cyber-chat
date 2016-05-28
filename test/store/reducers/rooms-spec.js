@@ -1,9 +1,9 @@
-import { JOIN_ROOM, LEAVE_ROOM, CHAT_MESSAGE } from '../../../constants'
+import { JOIN_ROOM, LEAVE_ROOM, CHAT_MESSAGE_RECEIVED } from '../../../constants'
 import { rooms } from '../../../store/reducers'
 import deepFreeze from 'deep-freeze'
 import { expect } from 'chai'
 
-describe('members Reducer', () => {
+describe('rooms Reducer', () => {
 
     it('JOIN_ROOM success', () => {
         const state = [
@@ -75,7 +75,7 @@ describe('members Reducer', () => {
         ])
     })
 
-    it('CHAT_MESSAGE success', () => {
+    it('CHAT_MESSAGE_RECEIVED success', () => {
         const state = [
             {
                 'name': 'politics',
@@ -89,7 +89,7 @@ describe('members Reducer', () => {
             }
         ]
         const action = {
-            type: CHAT_MESSAGE,
+            type: CHAT_MESSAGE_RECEIVED,
             member: 'mark',
             room: 'politics',
             message: 'hey guys'

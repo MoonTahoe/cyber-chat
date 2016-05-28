@@ -1,5 +1,5 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux'
-import { user, rooms } from './reducers'
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
+import { users, user, room, rooms } from './reducers'
 
 const logger = store => next => action => {
     let result
@@ -12,15 +12,23 @@ const logger = store => next => action => {
     return result
 }
 
-module.exports = (logging = false, initialState={}) => {
+
+module.exports = (serverStore=false, logging = false, initialState={}) => {
+
+    const reducers = combineReducers(
+        (serverStore) ?
+            {users, rooms} :
+            {user, room}
+    )
+
     if (logging) {
         return applyMiddleware(logger)(createStore)(
-            combineReducers({user, rooms}),
+            reducers,
             initialState
         )
     } else {
         return createStore(
-            combineReducers({user, rooms}),
+            reducers,
             initialState
         )
     }

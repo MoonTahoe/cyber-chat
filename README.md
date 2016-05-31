@@ -27,7 +27,7 @@ This repo is currently under construction.
     * [~~(v0.1.3) Action Creators~~](https://github.com/MoonTahoe/cyber-chat/tree/v0.1.3)
 * [~~(v0.2.1) Server State and Client State with Redux~~](https://github.com/MoonTahoe/cyber-chat/tree/v0.2.1)    
 * (v0.3.0) Universal react-router 
-    * (v0.2.2) basic browser routes
+    * [~~(v0.2.2) basic browser routes~~](https://github.com/MoonTahoe/cyber-chat/tree/v0.2.2)
     * (v0.2.3) server universal browser routes
     * (v0.2.4) match??? (universal)
 * (v0.4.1) Express Server Rendered Home Page (Universal)

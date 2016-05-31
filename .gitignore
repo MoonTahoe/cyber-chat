@@ -1,5 +1,7 @@
 .idea/
 
+dist/assets
+
 # Logs
 logs
 *.log

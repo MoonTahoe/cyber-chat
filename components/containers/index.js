@@ -1,1 +1,2 @@
-module.exports = {}
+import Room from './Room'
+module.exports = {Room}

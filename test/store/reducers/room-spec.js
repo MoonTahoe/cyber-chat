@@ -2,6 +2,7 @@ import {
     REQUEST_ROOM,
     JOIN_ROOM,
     LEAVE_ROOM,
+    MEMBER_LEAVE_ROOM,
     CHAT_MESSAGE_SENT,
     CHAT_MESSAGE_RECEIVED
 } from '../../../constants'
@@ -66,7 +67,34 @@ describe('room Reducer', () => {
         })
     })
 
-    it('LEAVE_ROOM success', () => {
+    it('MEMBER_LEAVE_ROOM success', () => {
+        const state = {
+            'name': 'politics',
+            'requesting': false,
+            'members': ['phil', 'mark'],
+            'messages': [
+                'phil has entered the room',
+                'phil: hello???',
+                'mark has entered the room'
+            ]
+        }
+        const action = {
+            type: MEMBER_LEAVE_ROOM,
+            room: 'politics',
+            member: 'mark'
+        }
+        deepFreeze(state)
+        deepFreeze(action)
+
+        expect(room(state, action)).to.deep.equal({
+            'name': '',
+            'requesting': false,
+            'members': [],
+            'messages': []
+        })
+    })
+
+    it('LEAVE_RROM success', () => {
         const state = {
             'name': 'politics',
             'requesting': false,
@@ -80,16 +108,21 @@ describe('room Reducer', () => {
         const action = {
             type: LEAVE_ROOM,
             room: 'politics',
-            member: 'mark'
+            member: 'phil'
         }
         deepFreeze(state)
         deepFreeze(action)
 
         expect(room(state, action)).to.deep.equal({
-            'name': '',
+            'name': 'politics',
             'requesting': false,
-            'members': [],
-            'messages': []
+            'members': ['mark'],
+            'messages': [
+                'phil has entered the room',
+                'phil: hello???',
+                'mark has entered the room',
+                'phil has left the room'
+            ]
         })
     })
 

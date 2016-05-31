@@ -2,6 +2,7 @@ import {
     REQUEST_ROOM,
     JOIN_ROOM,
     LEAVE_ROOM,
+    MEMBER_LEAVE_ROOM,
     CHAT_MESSAGE_SENT,
     CHAT_MESSAGE_RECEIVED
 } from '../../constants'
@@ -24,6 +25,12 @@ const room = (state = {}, action = {type: null}) => {
                 messages: action.messages
             }
         case LEAVE_ROOM :
+            return {
+                ...state,
+                members: members(state.members, action),
+                messages: messages(state.messages, action)
+            }
+        case MEMBER_LEAVE_ROOM :
             return {
                 'name': '',
                 'requesting': false,

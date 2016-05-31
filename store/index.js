@@ -1,7 +1,7 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import { users, user, room, rooms } from './reducers'
 
-const logger = store => next => action => {
+const clientLogger = store => next => action => {
     let result
     console.groupCollapsed('dispatching', action.type)
     console.log('prev state', store.getState())
@@ -12,14 +12,22 @@ const logger = store => next => action => {
     return result
 }
 
+const serverLogger = store => next => action => {
+    let result
+    console.log('dispatching', action.type)
+    result = next(action)
+    return result
+}
 
-module.exports = (serverStore=false, logging = false, initialState={}) => {
+module.exports = (logging = false, serverStore = false, initialState = {}) => {
 
     const reducers = combineReducers(
         (serverStore) ?
-            {users, rooms} :
-            {user, room}
+        {users, rooms} :
+        {user, room}
     )
+
+    const logger = (serverStore) ? serverLogger : clientLogger
 
     if (logging) {
         return applyMiddleware(logger)(createStore)(

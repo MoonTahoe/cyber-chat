@@ -5,7 +5,7 @@ import { Router } from 'express'
 import initialState from '../../data/client'
 import storeFactory from '../../store'
 
-const store = storeFactory(false, initialState)
+const clientStore = storeFactory(false, false, initialState)
 
 const router = Router()
 
@@ -28,14 +28,13 @@ const createPage = (html, state) => `<!DOCTYPE html>
 
 router.get('/', (req, res) => {
     res.status = 200
-
     const html = renderToString(
-        <Provider store={store}>
+        <Provider store={clientStore}>
             <App />
         </Provider>
     )
 
-    res.send(createPage(html, store.getState()))
+    res.send(createPage(html, clientStore.getState()))
 })
 
 module.exports = router

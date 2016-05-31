@@ -1,6 +1,6 @@
 module.exports = {
     'user': '',
-    'rooms': {
+    'room': {
         'name': '',
         'requesting': false,
         'members': [],

@@ -1,4 +1,4 @@
-const sockets = io =>
+const sockets = (io, store) =>
     io.sockets.on('connection', function (socket) {
         console.log(`${socket.id} connected`)
         socket.once('disconnect',() => {

@@ -11,7 +11,7 @@ const io = require('socket.io').listen(server)
 global.React = React
 app.set('port', port)
 server.listen(port)
-sockets(io)
+sockets(io, app.get('store'))
 
 server.on('error', (error) => {
 

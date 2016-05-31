@@ -26,15 +26,12 @@ This repo is currently under construction.
     * [~~(v0.1.2) Store and Middleware~~](https://github.com/MoonTahoe/cyber-chat/tree/v0.1.2)
     * [~~(v0.1.3) Action Creators~~](https://github.com/MoonTahoe/cyber-chat/tree/v0.1.3)
 * [~~(v0.2.1) Server State and Client State with Redux~~](https://github.com/MoonTahoe/cyber-chat/tree/v0.2.1)    
-* (v0.3.0) Universal react-router 
-    * [~~(v0.2.2) basic browser routes~~](https://github.com/MoonTahoe/cyber-chat/tree/v0.2.2)
-    * (v0.2.3) server universal browser routes
-    * (v0.2.4) match??? (universal)
-* (v0.4.1) Express Server Rendered Home Page (Universal)
-* (v0.4.2) SCSS Style Solution        
-* (v1.0.0) Sockets and Actions Completed
-    * (v0.5.0) SET_NAME
-    * (v0.5.1) JOIN_ROOM
-    * (v0.5.2) CHAT_MESSAGE
-    * (v0.5.3) LEAVE_ROOM
-    * (v0.5.4) CHANGE_NAME
+* [~~(v0.3.0) Universal react-router~~](https://github.com/MoonTahoe/cyber-chat/tree/v0.3.0) 
+    * [~~(v0.2.2) basic browser routes~~](https://github.com/MoonTahoe/cyber-chat/tree/v0.2.2)     
+* (v0.4.0) Sockets and Actions Completed
+    * (v0.3.1) SET_NAME
+    * (v0.3.2) JOIN_ROOM
+    * (v0.3.3) CHAT_MESSAGE
+    * (v0.3.4) LEAVE_ROOM
+    * (v0.3.5) EXIT_CHAT
+* (v1.0.0) CSS Styles Integrated

@@ -20,11 +20,11 @@ module.exports = express()
     .use(bodyParser.urlencoded({extended: false}))
     .use(cookieParser())
     .use(cors())
+    .use(express.static(path.join(__dirname, '../dist')))
     .use((req, res, next) => {
         req.store = serverStore
         next()
     })
     .use('/', routes)
-    .use(express.static(path.join(__dirname, '../dist')))
     .use(notFoundError)
     .use(errorResponse)
